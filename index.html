@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>WarehousePro - Sistem Manajemen Gudang</title>
+    <title>WarehousePro - Operator Panel</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         }
         body {
             min-height: 100vh;
@@ -20,7 +20,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 500px;
+            max-width: 400px;
             width: 100%;
             text-align: center;
         }
@@ -35,13 +35,13 @@
         }
         h1 {
             color: white;
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
             letter-spacing: 2px;
         }
         .tagline {
             color: rgba(255,255,255,0.8);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             margin-bottom: 40px;
         }
         .card {
@@ -51,17 +51,24 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
             backdrop-filter: blur(10px);
         }
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 30px;
+        .welcome-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #008080;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 0.7rem;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
+            width: 100%;
             padding: 16px 24px;
             border-radius: 50px;
             font-size: 1rem;
@@ -70,49 +77,51 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-        }
-        .btn-admin {
-            background: #008080;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0,128,128,0.3);
-        }
-        .btn-admin:hover {
-            background: #006666;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,128,128,0.4);
-        }
-        .btn-operator {
             background: #25D366;
             color: white;
             box-shadow: 0 4px 15px rgba(37,211,102,0.3);
         }
-        .btn-operator:hover {
+        .btn:hover {
             background: #20b859;
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+        }
+        .btn:active {
+            transform: translateY(0);
         }
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 12px;
+            margin-top: 25px;
             padding-top: 20px;
             border-top: 1px solid #e0e0e0;
         }
         .feature {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: #666;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
         .feature span {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+        }
+        .info-box {
+            background: #e0f2f1;
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .info-box p {
+            font-size: 0.6rem;
+            color: #008080;
         }
         .footer {
             margin-top: 30px;
             color: rgba(255,255,255,0.6);
-            font-size: 0.6rem;
+            font-size: 0.55rem;
         }
         @media (max-width: 480px) {
             .card { padding: 20px; }
@@ -124,31 +133,34 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo">🏭</div>
+        <div class="logo">👷</div>
         <h1>WarehousePro</h1>
-        <div class="tagline">Sistem Manajemen Gudang Terintegrasi</div>
+        <div class="tagline">Operator Panel</div>
         
         <div class="card">
-            <div class="btn-group">
-                <a href="admin.html" class="btn btn-admin">
-                    👨‍💼 Admin Panel
-                </a>
-                <a href="operator.html" class="btn btn-operator">
-                    👷 Operator Panel
-                </a>
+            <div class="welcome-text">Selamat Datang, Operator!</div>
+            <div class="description">
+                Silakan masuk ke sistem untuk mencatat aktivitas kerja harian Anda.
             </div>
+            
+            <a href="operator.html" class="btn">
+                🚪 Masuk ke Operator Panel
+            </a>
             
             <div class="features">
                 <div class="feature"><span>📋</span> Daily Activity</div>
-                <div class="feature"><span>📥📤</span> Stock Management</div>
+                <div class="feature"><span>⏱️</span> Progress Tracker</div>
                 <div class="feature"><span>📷</span> QR Sync</div>
                 <div class="feature"><span>📎</span> Export Excel</div>
-                <div class="feature"><span>🎨</span> Custom Theme</div>
+            </div>
+            
+            <div class="info-box">
+                <p>💡 Informasi: Setelah mencapai 8 jam kerja, QR Code akan muncul untuk sinkronisasi ke Admin</p>
             </div>
         </div>
         
         <div class="footer">
-            <p>© 2024 WarehousePro | All Rights Reserved</p>
+            <p>© 2024 WarehousePro | Sistem Manajemen Gudang</p>
         </div>
     </div>
 </body>
