@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>WarehousePro - Sistem Manajemen Gudang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #008080 0%, #004d4d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .logo {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        h1 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .tagline {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.85rem;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 24px;
+            padding: 30px 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-admin {
+            background: #008080;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,128,128,0.3);
+        }
+        .btn-admin:hover {
+            background: #006666;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,128,128,0.4);
+        }
+        .btn-operator {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+        }
+        .btn-operator:hover {
+            background: #20b859;
+            transform: translateY(-2px);
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .feature {
+            font-size: 0.65rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .feature span {
+            font-size: 0.9rem;
+        }
+        .footer {
+            margin-top: 30px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.6rem;
+        }
+        @media (max-width: 480px) {
+            .card { padding: 20px; }
+            .btn { padding: 14px 20px; font-size: 0.9rem; }
+            .logo { font-size: 60px; }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🏭</div>
+        <h1>WarehousePro</h1>
+        <div class="tagline">Sistem Manajemen Gudang Terintegrasi</div>
+        
+        <div class="card">
+            <div class="btn-group">
+                <a href="admin.html" class="btn btn-admin">
+                    👨‍💼 Admin Panel
+                </a>
+                <a href="operator.html" class="btn btn-operator">
+                    👷 Operator Panel
+                </a>
+            </div>
+            
+            <div class="features">
+                <div class="feature"><span>📋</span> Daily Activity</div>
+                <div class="feature"><span>📥📤</span> Stock Management</div>
+                <div class="feature"><span>📷</span> QR Sync</div>
+                <div class="feature"><span>📎</span> Export Excel</div>
+                <div class="feature"><span>🎨</span> Custom Theme</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 WarehousePro | All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
